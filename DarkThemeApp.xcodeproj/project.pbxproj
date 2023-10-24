@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4560C5622AE7F42E00E1031F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560C5612AE7F42E00E1031F /* AppDelegate.swift */; };
 		4560C5642AE7F42E00E1031F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560C5632AE7F42E00E1031F /* SceneDelegate.swift */; };
-		4560C5662AE7F42F00E1031F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560C5652AE7F42F00E1031F /* ViewController.swift */; };
+		4560C5662AE7F42F00E1031F /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4560C5652AE7F42F00E1031F /* ThemeViewController.swift */; };
 		4560C5692AE7F42F00E1031F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4560C5672AE7F42F00E1031F /* Main.storyboard */; };
 		4560C56B2AE7F43100E1031F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4560C56A2AE7F43100E1031F /* Assets.xcassets */; };
 		4560C56E2AE7F43100E1031F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4560C56C2AE7F43100E1031F /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		4560C55E2AE7F42E00E1031F /* DarkThemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkThemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4560C5612AE7F42E00E1031F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4560C5632AE7F42E00E1031F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4560C5652AE7F42F00E1031F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4560C5652AE7F42F00E1031F /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		4560C5682AE7F42F00E1031F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4560C56A2AE7F43100E1031F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4560C56D2AE7F43100E1031F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,47 @@
 		4560C5602AE7F42E00E1031F /* DarkThemeApp */ = {
 			isa = PBXGroup;
 			children = (
-				4560C5612AE7F42E00E1031F /* AppDelegate.swift */,
-				4560C5632AE7F42E00E1031F /* SceneDelegate.swift */,
-				4560C5652AE7F42F00E1031F /* ViewController.swift */,
-				4560C5672AE7F42F00E1031F /* Main.storyboard */,
+				459490DD2AE8030A00ACA9D4 /* Model */,
+				459490DC2AE8014300ACA9D4 /* AppDelegator */,
+				459490DE2AE8031900ACA9D4 /* View */,
+				459490DF2AE8039B00ACA9D4 /* Controller */,
 				4560C56A2AE7F43100E1031F /* Assets.xcassets */,
-				4560C56C2AE7F43100E1031F /* LaunchScreen.storyboard */,
 				4560C56F2AE7F43100E1031F /* Info.plist */,
 			);
 			path = DarkThemeApp;
+			sourceTree = "<group>";
+		};
+		459490DC2AE8014300ACA9D4 /* AppDelegator */ = {
+			isa = PBXGroup;
+			children = (
+				4560C5612AE7F42E00E1031F /* AppDelegate.swift */,
+				4560C5632AE7F42E00E1031F /* SceneDelegate.swift */,
+			);
+			path = AppDelegator;
+			sourceTree = "<group>";
+		};
+		459490DD2AE8030A00ACA9D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		459490DE2AE8031900ACA9D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4560C5672AE7F42F00E1031F /* Main.storyboard */,
+				4560C56C2AE7F43100E1031F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		459490DF2AE8039B00ACA9D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4560C5652AE7F42F00E1031F /* ThemeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4560C5662AE7F42F00E1031F /* ViewController.swift in Sources */,
+				4560C5662AE7F42F00E1031F /* ThemeViewController.swift in Sources */,
 				4560C5622AE7F42E00E1031F /* AppDelegate.swift in Sources */,
 				4560C5642AE7F42E00E1031F /* SceneDelegate.swift in Sources */,
 			);
@@ -292,6 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VDVXDW9CJK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DarkThemeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -319,6 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VDVXDW9CJK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DarkThemeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
