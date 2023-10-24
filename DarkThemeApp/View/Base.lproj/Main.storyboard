@@ -36,6 +36,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="App Name" id="iA0-RD-D84">
+                        <barButtonItem key="leftBarButtonItem" image="square.and.arrow.up" catalog="system" id="2bl-VS-x1m">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="BYZ-38-t0r" id="6qJ-Ka-JRL"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="folder.circle" catalog="system" id="jwh-Xn-3Dv">
                             <connections>
                                 <action selector="folderButtonTapped:" destination="BYZ-38-t0r" id="Wu7-vL-ruX"/>
@@ -45,6 +50,7 @@
                     <connections>
                         <outlet property="darkButton" destination="Swd-y6-k1m" id="vXv-hd-IBb"/>
                         <outlet property="folderButton" destination="jwh-Xn-3Dv" id="Ucr-7C-7Qh"/>
+                        <outlet property="shareButton" destination="2bl-VS-x1m" id="eVP-Ay-df4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,6 +78,7 @@
     </scenes>
     <resources>
         <image name="folder.circle" catalog="system" width="128" height="123"/>
+        <image name="square.and.arrow.up" catalog="system" width="108" height="128"/>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

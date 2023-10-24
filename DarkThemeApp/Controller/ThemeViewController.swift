@@ -13,31 +13,50 @@ import UIKit
 
 class ThemeViewController: UIViewController {
     @IBOutlet weak var darkButton: UIButton!
+    var isDarkModeEnabled = false
     
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var folderButton: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         print("func viewDidLoad")
         darkButton.layer.cornerRadius = 10
+        updateTheme()
     }
     
     
     @IBAction func darkButtonTapped(_ sender: Any) {
-        print("darkButtonTapped")
-        view.backgroundColor = UIColor.black
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        isDarkModeEnabled.toggle()
+        updateTheme()
         
-        darkButton.setTitle("DisableDarkTheme", for: .normal)
-        darkButton.setTitleColor(UIColor.black, for: .normal)
-        darkButton.tintColor = UIColor.white
         
+    }
+    func updateTheme() {
+        if isDarkModeEnabled {
+            view.backgroundColor = UIColor.black
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            
+            darkButton.setTitle("DisableDarkTheme", for: .normal)
+            darkButton.setTitleColor(UIColor.black, for: .normal)
+            darkButton.tintColor = UIColor.white
+        } else {
+            view.backgroundColor = UIColor.white
+            navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            
+            darkButton.setTitle("EnableDarkTheme", for: .normal)
+            darkButton.setTitleColor(UIColor.white, for: .normal)
+            darkButton.tintColor = UIColor.white
+        }
     }
     @IBAction func folderButtonTapped(_ sender: Any) {
         basicAlert(title: "My folder", message: "This is my item button!")
     }
     
-
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        basicAlert(title: "Share content", message: "Do you want to share now?")
+    }
+    
     
 }
 
